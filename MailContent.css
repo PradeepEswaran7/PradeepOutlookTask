@@ -1,0 +1,64 @@
+.App {
+    /* font-family: Arial, sans-serif; */
+    margin-left: 7%;
+    width: 33%;
+    position: relative; /* Added for pseudo-elements positioning */
+    padding: 8px; /* Added padding */
+    height: 100vh;
+    overflow: auto; /* Enable scrolling for content overflow */
+  }
+  
+  .App::before, .App::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 1px; /* Width of the vertical line */
+    background-color: darkgray; /* Color of the vertical line */
+  }
+  
+  .App::before {
+    left: 20%; /* Position at the left end */
+  }
+  
+  .App::after {
+    right: 45%; /* Position at the right end */
+  }
+  
+  .row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+    border-bottom: 1px solid black;
+  } 
+  
+  .row p {
+    margin: 0;
+    padding: 0 8px;
+  }
+  
+  p {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  
+  .day {
+    background-color: #ddd;
+    margin-left: -4%;
+    margin-right: -4%;
+  }
+  
+  .subject-container {
+    display: flex;
+  }
+  
+  .subject {
+    flex: 1;
+  }
+  
+  .time-day {
+    flex: 0;
+    white-space: nowrap;
+  }
+  
